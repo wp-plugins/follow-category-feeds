@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 Tags: categories, RSS, feed, follow, subscribe
 Requires at least: 3.1
 Tested up to: 3.4.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 This plugin adds category feed links after post content on single posts.
 
@@ -31,5 +31,10 @@ Just like the normal Wordpress site feed, wordpress categories and tags also has
 
 * Initial public release
 
+= 1.1 =
+* Since `get_category_rss_link` function is deprecated, we are using `get_category_feed_link` function to get category feed link.
+
+* Added `fcfeeds` class to the output. So, you can style it now using `.fcfeeds` class.
+
 == Upgrade Notice ==
-*No Upgrade Notice so far.
+* Version 1.0 uses a deprecated function. So, if you are using the first version, please update to version 1.1 or later. Sorry about that.
