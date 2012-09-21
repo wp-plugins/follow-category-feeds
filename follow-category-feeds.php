@@ -3,7 +3,7 @@
 Plugin Name: Follow Category Feeds
 Plugin URI: http://www.prasannasp.net/follow-wordpress-category-feeds-plugin/
 Description: This plugin adds link to RSS feed for the current post categories after post content. RSS feed link for categories are usually /category/categoryname/feed. Make sure you are not redirecting your category feeds to feedburner before activating this plugin.
-Version: 2.0
+Version: 2.1
 Author: Prasanna SP
 Author URI: http://www.prasannasp.net/
 */
@@ -39,9 +39,9 @@ function fwcf_add_to_post_footer($content) {
 	$options = get_option('fwcf_options');
 	$followcatstext = $options['follow_cats_txt'];
 
- if ( is_single() )
+ if (isset($options['on_other_pages']) || is_single() )
  {
-		$content .= '<p> '.$followcatstext.' '.fwcf_get_cat_feed_links().'</p>'; 
+		$content .= '<p class="follow-cat-feed"> '.$followcatstext.' '.fwcf_get_cat_feed_links().'</p>'; 
 			}
 	return $content;
 
@@ -89,6 +89,13 @@ function fwcf_options_page_form() {
 					<th scope="row">Title for Follow Category Feeds:</th>
 					<td>
 						<input type="text" size="50" name="fwcf_options[follow_cats_txt]" value="<?php echo $options['follow_cats_txt']; ?>" />
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Show on other pages as well?</th>
+					<td>
+						<label><input name="fwcf_options[on_other_pages]" type="checkbox" value="1" <?php if (isset($options['on_other_pages'])) { checked('1', $options['on_other_pages']); } ?> /> <br />
+						<span class="description">By default the plugin shows category feed link on single post only. Selecting this will add category feed links to posts on other pages, such as blog page and archives where full content is shown.</span> </label><br />
 					</td>
 				</tr>
 			</table>

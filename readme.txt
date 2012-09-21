@@ -6,20 +6,16 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 Tags: categories, RSS, feed, follow, subscribe
 Requires at least: 3.1
 Tested up to: 3.4.1
-Stable tag: 2.0
+Stable tag: 2.1
 
 This plugin adds category feed links after post content on single posts.
 
 == Description ==
-Just like the normal Wordpress site feed, wordpress categories and tags also has feeds. The category feed is located at `site.url/category/categoryname/feed`. This plugin automatically adds the RSS feed link to the current post categories after the post content. You can change it's title in WP-Admin --> Settings --> Follow Category Feeds.
+Just like the normal Wordpress site feed, wordpress categories and tags also has feeds. The category feed is located at `site.url/category/categoryname/feed`. This plugin automatically adds the RSS feed link to the current post categories after the post content. By default the plugin shows category feed link on single posts. You can change it's settings to show it on other pages, such as archives as well. You can change it's title in WP-Admin --> Settings --> Follow Category Feeds.
 
-<strong>Other plugins from the developer</strong>
-<ul>
-<li><a href="http://wordpress.org/extend/plugins/custom-recent-posts-widget/">Custom Recent Posts Widget</a></li>
-<li><a href="http://wordpress.org/extend/plugins/kannada-comment/">Kannada Comment</a></li>
-</ul>
+Visit <a href="http://www.prasannasp.net/wordpress-plugins/">this page</a> for more <strong>WordPress Plugins</strong> from the developer.
 
-Visit <a href="http://www.prasannasp.net/blog/">my blog</a> for more information on WordPress and plugins.
+Visit <a href="http://www.prasannasp.net/">developer's blog</a> for more information on WordPress and plugins.
 
 == Installation ==
 
@@ -35,6 +31,12 @@ Visit <a href="http://www.prasannasp.net/blog/">my blog</a> for more information
 2. Plugin Options Page
 
 == Changelog ==
+
+= 2.1 =
+
+* Added option to show the category feed link on other pages, such as home page and archives
+
+* Added `follow-cat-feed` class to the category links. You can use `.follow-cat-feed` CSS class to style it.
 
 = 2.0 =
 
