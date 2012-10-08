@@ -3,7 +3,7 @@
 Plugin Name: Follow Category Feeds
 Plugin URI: http://www.prasannasp.net/follow-wordpress-category-feeds-plugin/
 Description: This plugin adds link to RSS feed for the current post categories after post content. RSS feed link for categories are usually /category/categoryname/feed. Make sure you are not redirecting your category feeds to feedburner before activating this plugin.
-Version: 2.1
+Version: 2.1.1
 Author: Prasanna SP
 Author URI: http://www.prasannasp.net/
 */
@@ -39,7 +39,7 @@ function fwcf_add_to_post_footer($content) {
 	$options = get_option('fwcf_options');
 	$followcatstext = $options['follow_cats_txt'];
 
- if (isset($options['on_other_pages']) || is_single() )
+ if (isset($options['on_other_pages']) && !(is_page() || is_attachment()) || is_single() )
  {
 		$content .= '<p class="follow-cat-feed"> '.$followcatstext.' '.fwcf_get_cat_feed_links().'</p>'; 
 			}

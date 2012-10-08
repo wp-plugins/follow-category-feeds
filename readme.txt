@@ -6,7 +6,7 @@ License URI: http://www.gnu.org/copyleft/gpl.html
 Tags: categories, RSS, feed, follow, subscribe
 Requires at least: 3.1
 Tested up to: 3.4.1
-Stable tag: 2.1
+Stable tag: 2.1.1
 
 This plugin adds category feed links after post content on single posts.
 
@@ -31,6 +31,10 @@ Visit <a href="http://www.prasannasp.net/">developer's blog</a> for more informa
 2. Plugin Options Page
 
 == Changelog ==
+
+= 2.1.1 =
+
+* Fixed the issue of the category feed function being called on pages, which doesn't belong to any category.
 
 = 2.1 =
 
