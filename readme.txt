@@ -5,8 +5,8 @@ License: GPLv3
 License URI: http://www.gnu.org/copyleft/gpl.html
 Tags: categories, RSS, feed, follow, subscribe
 Requires at least: 3.1
-Tested up to: 3.4.1
-Stable tag: 2.1.1
+Tested up to: 3.4.2
+Stable tag: 2.1.2
 
 This plugin adds category feed links after post content on single posts.
 
@@ -27,10 +27,16 @@ Visit <a href="http://www.prasannasp.net/">developer's blog</a> for more informa
 
 == Screenshots ==
 
-1. Plugin showing link to RSS feed for Linux, Open Source and Ubuntu categories in post foooter
+1. Plugin showing link to RSS feed for Linux, Open Source and Ubuntu categories in post footer
 2. Plugin Options Page
 
 == Changelog ==
+
+= 2.1.2 =
+
+* Code enhancement. The options stored in the database will be retained even after deactivating the plugin. This is to prevent the removal of plugin options upon plugin update/reactivation. If you want to clear the database entries upon plugin deactivation, select <strong>Restore defaults upon plugin deactivation/reactivation</strong> in plugin options.
+
+* Added link to support forum.
 
 = 2.1.1 =
 
